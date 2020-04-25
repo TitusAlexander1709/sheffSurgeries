@@ -1,11 +1,13 @@
 package com.tgreen
 
 class Doctor {
+	int docID;
 	String fullName;
 	String qualification;
 	String position;
 	String doctorEmail;
 	String password;
+	Surgery location;
 	String doctorOffice;
 	int doctorPhone;
 	String bio;
@@ -23,8 +25,8 @@ class Doctor {
 	doctorOffice blank:false, nullable: false, maxSize: 8
 	doctorPhone blank:false, nullable: false, maxSize: 11, unique: true
 	bio blank:false, nullable: false, widget: 'textarea', maxSize: 5000
-
-
+	location blank: false, nullable:false
+	docID blank: false, nullable:false, unique: true
 
 
 

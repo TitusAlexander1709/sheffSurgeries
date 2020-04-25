@@ -1,5 +1,6 @@
 package com.tgreen
 
+
 class Patient {
 	String patientName;
 	String patientAddress;
