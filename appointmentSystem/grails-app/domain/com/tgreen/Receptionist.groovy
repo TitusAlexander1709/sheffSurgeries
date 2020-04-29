@@ -7,8 +7,10 @@ class Receptionist {
 	String recepPassword;
 	int recepPhone;
 	Surgery location;
-
-
+	String toString() {
+	return recepName
+	}
+	
 
     static constraints = {
 	recepName blank:false, nullable: false
@@ -16,7 +18,7 @@ class Receptionist {
 	recepUsername blank:false, nullable: false, unique: true, maxSize: 20
 	recepPassword blank:false, nullable: false, minSize: 6
 	recepPhone blank:false, nullable: false, maxSize: 11, unique: true
-	location blank: false, nullable:false, unique: true
+	location blank: false, nullable:false
 
 
 

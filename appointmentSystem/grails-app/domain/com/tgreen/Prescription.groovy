@@ -9,7 +9,9 @@ class Prescription {
 	Patient issuedToPatient;
 	Date dateIssued;
 	boolean patientPaying;
-
+	String toString() {
+	return prescripNumber
+	}
 
 
     static constraints = {
@@ -19,8 +21,8 @@ class Prescription {
 	totalCost blank:false, nullable: false, scale: 2
 	dateIssued blank:false, nullable: false
 	patientPaying blank:false, nullable: false
-	issuedBy blank: false, nullable:false, unique: true
-	issuedToPatient blank: false, nullable:false, unique: true
+	issuedBy blank: false, nullable:false
+	issuedToPatient blank: false, nullable:false
 
 
     }

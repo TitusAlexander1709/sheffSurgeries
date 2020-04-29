@@ -12,14 +12,17 @@ class Nurse {
 	return nurseName	
 	}
 
+	static hasMany=[doctors:Doctor]
+	static belongsTo=[Doctor]
 
-    static constraints = {
-	nurseName blank:false, nullable: false, maxSize:50
-	qualifications blank:false, nullable: false
-	nurseEmail email:true, blank:false, nullable: false
-	nurseOffice maxSize:5, blank:false, nullable: false
-	nursePhone blank:false, nullable: false, maxSize:11
-	nurseID blank: false, nullable:false, unique: true
-	surgeryAssignedTo blank: false, nullable:false
+
+	static constraints = {
+		nurseName blank:false, nullable: false, maxSize:50
+		qualifications blank:false, nullable: false
+		nurseEmail email:true, blank:false, nullable: false
+		nurseOffice maxSize:5, blank:false, nullable: false
+		nursePhone blank:false, nullable: false, maxSize:11
+		nurseID blank: false, nullable:false, unique: true
+		surgeryAssignedTo blank: false, nullable:false
     }
 }

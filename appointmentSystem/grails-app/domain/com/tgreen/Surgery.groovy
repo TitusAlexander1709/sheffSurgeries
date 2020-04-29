@@ -13,6 +13,8 @@ class Surgery {
 	return name
 	}	
 
+	static hasMany=[receptionists:Receptionist, doctors:Doctor, nurses:Nurse, patients:Patient, appointments:Appointment]
+
 
     static constraints = {
 	name blank:false, nullable: false

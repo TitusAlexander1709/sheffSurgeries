@@ -1,7 +1,6 @@
 package com.tgreen
 
 class Appointment {
-	int appointmentID;
 	Patient patientID;
 	Date appDate;
 	String appTime;
@@ -9,16 +8,19 @@ class Appointment {
 	Surgery appointmentLocation;
 	String roomNumber;
 	Doctor doctor;
-
+	String toString() {
+	return appDate
+	}
+	
+	
 
     static constraints = {
+	patientID blank: false, nullable:false
 	appDate blank:false, nullable: false
 	appTime blank:false, nullable: false, maxSize:7
 	appDuration blank:false, nullable: false, max: 60, maxSize: 2
 	roomNumber blank:false, nullable: false, maxSize: 6
-	appointmentID blank: false, nullable:false, unique: true
-	appointmentLocation blank: false, nullable:false, unique: true
-	doctor blank: false, nullable:false, unique: true
-	patientID blank: false, nullable:false, unique: true
+	appointmentLocation blank: false, nullable:false
+	doctor blank: false, nullable:false
     }
 }

@@ -11,9 +11,11 @@ class Doctor {
 	String doctorOffice;
 	int doctorPhone;
 	String bio;
-
-
-
+	String toString() {
+	return fullName
+	}
+	
+	static hasMany=[patients:Patient, prescriptions:Prescription, nurses:Nurse, appointments: Appointment]
 
 
     static constraints = {
